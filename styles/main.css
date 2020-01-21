@@ -9,8 +9,8 @@
 }
 
 main.center ol {
-  text-align: left !important;
-  margin-left: 50px;
+  text-align: left;
+  margin-left: 50px !important;
 }
 
 .center {
