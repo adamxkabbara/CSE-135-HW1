@@ -4,4 +4,4 @@ node_js_:
 install:
   - npm install -g firebase-tools
 after-success:
-  -firebase deploy --token GIT1//066cJLbzffAC5CgYIARAAGAYSNwF-L9Ir70QKXLTI8mp4IJeFcKOJVfzNQB6BBB8YP4ylTjAuHaeKYmipGbFeJ2LgAIukJb3U9Pc
+  -firebase deploy --token 1//066cJLbzffAC5CgYIARAAGAYSNwF-L9Ir70QKXLTI8mp4IJeFcKOJVfzNQB6BBB8YP4ylTjAuHaeKYmipGbFeJ2LgAIukJb3U9Pc
