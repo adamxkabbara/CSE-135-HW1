@@ -9,7 +9,7 @@
 }
 
 main.center ol {
-  text-align: left;
+  text-align: left !important;
   margin-left: 50px;
 }
 
