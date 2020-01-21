@@ -193,3 +193,7 @@ canvas#myChart {
 img.wid2 {
   width: 200px;
 }
+main ol {
+  text-align: left;
+  margin-left: 50px;
+}

@@ -1,1 +1,1 @@
-cse-135-hw1-1551b.firebaseapp.com
+cse-135-hw1-ea734.firebaseapp.com
