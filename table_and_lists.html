@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Schedule - table and lists</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li class="nav-item"><a href="./index.html">Home</a></li>
+        <li class="nav-item"><a href="./externals.html">Projects</a></li>
+        <li class="nav-item"><a href="./images.html">About Me</a></li>
+        <li class="nav-item"><a href="./table_and_lists.html">Schedule</a></li>
+        <li class="nav-item"><a href="./form.html">Contact Form</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="center">
+    <table>
+      <caption>Weekly Schedule</caption>
+      <colgroup>
+        <col>
+        <col span="1" class="weekend">
+        <col span="5" class="weekday">
+        <col span="1" class="weekend">
+      </colgroup>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Saturday</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12:00am</td>
+          <td rowspan="7" colspan="7" class="break">Sleep</td>
+        </tr>
+        <tr>
+          <td>1:00am</td>
+        </tr>
+        <tr>
+          <td>2:00am</td>
+        </tr>
+        <tr>
+          <td>3:00am</td>
+        </tr>
+        <tr>
+          <td>4:00am</td>
+        </tr>
+        <tr>
+          <td>5:00am</td>
+        </tr>
+        <tr>
+          <td>6:00am</td>
+        </tr>
+        <tr>
+          <td>7:00am</td>
+          <td colspan="7" class="prep">Prep for day</td>
+        </tr>
+        <tr>
+          <td>8:00am</td>
+          <td rowspan="16" class="free">Free day</td>
+          <td class="education">CSE 135 - LE</td>
+          <td class="prep">Prep for day</td>
+          <td class="education">CSE 135 - LE</td>
+          <td class="prep">Prep for day</td>
+          <td class="education">CSE 135 - LE</td>
+          <td rowspan="16" class="free">Free day</td>
+        </tr>
+        <tr>
+          <td>9:00am</td>
+          <td class="break">Break</td>
+          <td rowspan="8" class="work">Work</td>
+          <td rowspan="2" class="break">Break</td>
+          <td rowspan="8" class="work">Work</td>
+          <td rowspan="2" class="break">Break</td>
+        </tr>
+        <tr>
+          <td>10:00am</td>
+          <td class="education">CSE 135 - DI</td>
+        </tr>
+        <tr>
+          <td>11:00am</td>
+          <td rowspan="8" class="work">Work</td>
+          <td rowspan="8" class="work">Work</td>
+          <td rowspan="8" class="work">Work</td>
+        </tr>
+        <tr>
+          <td>12:00pm</td>
+        </tr>
+        <tr>
+          <td>1:00pm</td>
+        </tr>
+        <tr>
+          <td>2:00pm</td>
+        </tr>
+        <tr>
+          <td>3:00pm</td>
+        </tr>
+        <tr>
+          <td>4:00pm</td>
+        </tr>
+        <tr>
+          <td>5:00pm</td>
+          <td class="break" rowspan="7">Free time</td>
+          <td class="break" rowspan="7">Free time</td>
+        </tr>
+        <tr>
+          <td>6:00pm</td>
+        </tr>
+        <tr>
+          <td>7:00pm</td>
+          <td class="break" rowspan="5">Free time</td>
+          <td class="break" rowspan="5">Free time</td>
+          <td class="break" rowspan="5">Free time</td>
+        </tr>
+        <tr>
+          <td>8:00pm</td>
+        </tr>
+        <tr>
+          <td>9:00pm</td>
+        </tr>
+        <tr>
+          <td>10:00pm</td>
+        </tr>
+        <tr>
+          <td>11:00pm</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total Sleep:</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+          <td>7 hours</td>
+        </tr>
+      </tfoot>
+    </table>
+  </main>
+  <h3>Inspirational Morning Quotes</h3>
+  <dl class="schedule">
+    <dt class="red-pop">Steve Jobs</dt>
+    <dd>"If today were the last day of my life, would I want to do what I am about to do today?' If the Answer is 'no' for too many days in a row, I know I need to change something."</dd>
+    <dd>Your time is limited, so don't waste it living someone else's life</dd>
+    <dt class="red-pop">Eleanor Roosevelt</dt>
+    <dd>With the new day comes new strength and new thoughts.</dd>
+  </dl>
+  <h3>Food Prep Options</h3>
+  <ul class="schedule">
+    <li>Cream Cheese Sandwich</li>
+    <li>Egg Sandwich</li>
+    <li>Cereal</li>
+  </ul>
+  <h3>Morning Steps for Weekdays</h3>
+  <ol class="schedule">
+    <li>Wake up</li>
+    <li>10min shower</li>
+    <li>20min to prep</li>
+    <li>Be out of the house at 7:35 at most</li>
+  </ol>
+</body>
+</html>

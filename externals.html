@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Random - externals</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/kickstart.css" media="all" /> <!-- KICKSTART -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+  <header>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable">
+      <a href="./index.html" class="pure-menu-link pure-menu-heading">Adam Kabbara</a>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="./index.html" class="pure-menu-link"><i class="material-icons">home</i>Home</a></li>
+        <li class="pure-menu-item"><a href="./images.html" class="pure-menu-link">Projects</a></li>
+        <li class="pure-menu-item"><a href="./externals.html" class="pure-menu-link">About Me</a></li>
+        <li class="pure-menu-item"><a href="./table_and_lists.html" class="pure-menu-link">Schedule</a></li>
+        <li class="pure-menu-item"><a href="./form.html" class="pure-menu-link">Contact Form</a></li>
+      </ul>
+    </div>
+  </header>
+  <main class="center">
+    <div class="alert alert-primary" role="alert">
+      Adam Kabbara
+    </div>
+    <input type="checkbox" id="check1" />
+    <label for="check1" class="inline">Check this box if you like this navbar better</label>
+    <h3 class="gfont">iframe of my Schedule</h3>
+    <iframe src="./table_and_lists.html"></iframe>
+    <h3 class="gfont">iframe of my Home Page</h3>
+    <iframe src="./index.html"></iframe>
+    <h3 class="gfont">Outside Video</h3>
+    <div data-aos="flip-left">
+      <video controls>
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+          video tag not supported
+      </video>
+    </div>
+    <h3 class="gfont">Recent Videos I have Watched</h3>
+    <div data-aos="flip-left">
+      <img class="movie-post" src="https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SY1000_SX675_AL_.jpg" alt="Knives Out Movie">
+      <img class="movie-post" src="https://m.media-amazon.com/images/M/MV5BNmQ2NWMyZDgtNWQ5My00ZmQwLWE0MTQtN2ZiNjY2ODc0Y2YxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SY1000_SX674_AL_.jpg" alt="Code 8 Movie">
+      <img class="movie-post" src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SY1000_CR0,0,674,1000_AL_.jpg" alt="Perasite Movie">
+    </div>
+    <h3 class="gront">Rank of my favorite colors</h3>
+    <canvas id="myChart" class="center"></canvas>
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+      </script>
+  </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

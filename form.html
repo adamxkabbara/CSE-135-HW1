@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>forms</title>
+    <meta name="description" content="forms">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="nav-item"><a href="./index.html">Home</a></li>
+          <li class="nav-item"><a href="./externals.html">Projects</a></li>
+          <li class="nav-item"><a href="./images.html">About Me</a></li>
+          <li class="nav-item"><a href="./table_and_lists.html">Schedule</a></li>
+          <li class="nav-item"><a href="./form.html">Contact Form</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="center">
+      <h1>Contact Me</h1>
+      <form class="center" action="https://httpbin.org/post" method="post" oninput="result.value=parseInt(x.value)+parseInt(y.value)" autocomplete="on">
+        <fieldset>
+          <legend>Your Details:</legend>
+          <div class="input-field">
+            <label>Name: <input type="text" name="name" required autofocus size="35" maxlength="100" placeholder="Your name" onclick="updateProg(20)" tabindex="1"></label><br>
+            <label>Email: <input type="email" name="email" required size="35" maxlength="100" placeholder="Your email" onclick="updateProg(20)" tabindex="2"></label><br>
+            <label>Occupation: <input type="hidden" name="occupation"> </label> <br>
+            <label>Date:<input type="date"></label><br>
+            <label>Datetime-local:<input type="datetime-local"></label><br>
+            <label>Current time:<input type="time"></label><br>
+            <label>Month:<input type="month"></label><br>
+            <label>Week:<input type="week"></label><br>
+            <label>Phone:<input type="tel"></label><br>
+            <label>Favorite Color<input type="color"></label><br>
+            <label>Upload file:<input type="file"></label><br>
+            <label>Password:<input type="password"></label><br>
+            <label>Search:<input type="search"></label><br>
+            <label>Personal Website:<input type="url"></label><br>
+          </div>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Background Information:</legend>
+          <div>
+            <label for="hear-about">How did you hear about Me?</label>
+            <select name="referrer" id="hear-about" tabindex="3" multiple>
+              <option value="google">LinkedIn</option>
+              <option value="google">Google</option>
+              <option value="facebook">Facebook</option>
+              <option value="friend">Friend</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <br>
+          <div>
+            <label>
+              Sex:
+              <input name="sex" list="sexes" tabindex="4">
+              <datalist id="sexes">
+                <option value="Female">
+                <option value="Male">
+              </datalist>
+            </label>
+          </div>
+          <br>
+          <div>
+            <span>Diet:</span>
+            <label><input type="radio" name="rating" value="None"/>None</label>
+            <label><input type="radio" name="rating" value="vegan"/>Vegan</label>
+            <label><input type="radio" name="rating" value="vegetarian"/>Vegetarian</label>
+            <label><input type="radio" name="rating" value="kosher"/>Kosher</label>
+            <label><input type="radio" name="rating" value="halal"/>Halal</label>
+            <label><input type="radio" name="rating" disabled value="other"/>Other</label>
+            <br>
+            <label for="comments">If other, please list below?</label>
+            <br><br>
+            <textarea rows="4" cols="45" id="comments" readonly></textarea>
+          </div>
+          <br>
+          <div>
+            <span>Favoriate Fruit?</span>
+            <select name="fruit" id="fruit">
+              <optgroup label="apple">
+                <option value="redApple">Red apple</option>
+                <option value="greenApple">Green apple</option>
+                <option value="yellowApple">Yellow apple</option>
+              </optgroup>
+              <optgroup label="pear">
+                  <option value="asianPear">Asian pear</option>
+                  <option value="europeanPear">European pear</option>
+                  <option value="calleryPear">Callery pear</option>
+              </optgroup>
+            </select>
+          </div>
+          <br>
+          <div>
+            <label><input type="checkbox" name="subscribe" checked="checked" /> Sign me up for email updates</label>
+            <br>
+            <p>Total number of members: <meter min="0" max="100000" value="10000">your are 10000 of 100000 avaliable users</meter></p>
+            <input type="reset" value="Rest" onclick="updateProg(00)"/>
+            <input type="submit" disabled>
+            <button onclick="updateProg(100)">Submit</button>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Addition</legend>
+          <input type="number" name="x" value="10" /> +
+          <input type="number" name="y" value="30" /> =
+          <output name="result">40</output>
+        </fieldset>
+        <div>
+          Completed:
+          <progress id="prog" value="1" max="100">
+            <span>0</span>%
+          </progress>
+        </div>
+      </form>
+    </main>
+    <script>
+        var progBar = document.getElementById('prog');
+        function updateProg(newValue) {
+          progBar.value += newValue;
+          progBar.getElementsByTagName('span')[0].textContent = progBar.value;
+        }
+      </script>
+  </body>
+</html>
